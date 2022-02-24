@@ -1,0 +1,82 @@
+{
+    "parameterSets": {
+        "pin box": {
+            "bottomPart": "true",
+            "depth": "20",
+            "fingerGap": "false",
+            "fingerGapSize": "25",
+            "height": "60",
+            "interrior_radius": "6",
+            "isExternal": "true",
+            "lt": "0.15",
+            "rounded": "true",
+            "topPart": "true",
+            "tt": "0.4",
+            "width": "90",
+            "wt": "1.1"
+        },
+        "card box": {
+            "bottomPart": "true",
+            "depth": "35",
+            "fingerGap": "true",
+            "fingerGapSize": "25",
+            "height": "59",
+            "interrior_radius": "0",
+            "isExternal": "false",
+            "lt": "0.15",
+            "rounded": "true",
+            "topPart": "true",
+            "tt": "0.4",
+            "width": "90",
+            "wt": "1.1"
+        },
+        "Box 57x38x16": {
+            "bottomPart": "true",
+            "depth": "16",
+            "fingerGap": "false",
+            "fingerGapSize": "25",
+            "height": "38",
+            "interrior_radius": "0",
+            "isExternal": "true",
+            "lt": "0.1",
+            "rounded": "true",
+            "topPart": "true",
+            "tt": "0.4",
+            "width": "57",
+            "wt": "0.86"
+        },
+        "pencil case": {
+            "bottomPart": "true",
+            "depth": "30",
+            "fingerGap": "true",
+            "fingerGapSize": "30",
+            "height": "65",
+            "interrior_radius": "3",
+            "isExternal": "true",
+            "lt": "0.2",
+            "rounded": "true",
+            "topPart": "true",
+            "tt": "0.4",
+            "width": "195",
+            "wt": "1.56"
+        },
+        "photo 10x15": {
+            "bottomPart": "true",
+            "depth": "38",
+            "fingerGap": "true",
+            "fingerGapSize": "35",
+            "height": "105",
+            "interrior_radius": "0",
+            "isExternal": "false",
+            "lt": "0.1",
+            "rounded": "true",
+            "topPart": "true",
+            "tt": "0.4",
+            "width": "155",
+            "wt": "0.86"
+        }
+    },
+    "fileFormatVersion": "1",
+    "parameterSets": "",
+    "parameterSets": ""
+}
