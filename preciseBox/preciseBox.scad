@@ -102,7 +102,7 @@ module part_bottom() {
     }
     // Comparment hole
     translate([2 * wt + lt, 2 * wt + lt, 2 * wt]) 
-      r_cube([_width - 4 * wt - 2 * lt, _height - 4 * wt - 2 * lt, _depth - 4 * wt - tt], interrior_radius, true, false);
+      r_cube([_width - 4 * wt - 2 * lt, _height - 4 * wt - 2 * lt, _depth - 4 * wt], interrior_radius, true, false);
     if (fingerGap) {
       union() {
         translate([6 * wt + lt + fingerGapSize / 2, 0, 2 * wt + fingerGapSize / 2])
