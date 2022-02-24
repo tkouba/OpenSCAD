@@ -70,8 +70,12 @@
             "isExternal": "false",
             "lt": "0.1",
             "rounded": "true",
+            "textOnTop": "Ála a Honza",
+            "textOnTopDepth": "0.15",
+            "textOnTopSize": "10",
             "topPart": "true",
             "tt": "0.4",
+            "useTextOnTop": "true",
             "width": "155",
             "wt": "0.86"
         }

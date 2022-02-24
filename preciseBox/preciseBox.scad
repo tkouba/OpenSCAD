@@ -1,5 +1,5 @@
 /**************************************************************
- * PARAMETRIC PRECISE BOX version 1.4    (2021-08-31)         *
+ * PARAMETRIC PRECISE BOX version 1.5    (2022-02-24)         *
  * Copyright (c) Tomas "Arci" Kouba, 2021                     *
  * ---------------------------------------------------------- *
  * Licensed under terms of the                                *
@@ -7,6 +7,8 @@
  * International (CC BY-NC-SA 4.0) license                    *
  * ---------------------------------------------------------- *
  * History:                                                   *
+ *  1.5 (2022-02-24):                                         *
+ *    * Add optional text on top part
  *  1.4 (2021-08-31):                                         *
  *    * Fixed depth internal size calculation                 *
  *  1.3 (2021-08-26):                                         *
@@ -46,6 +48,16 @@ fingerGapSize = 25; // [5:1:40]
 rounded = true;
 // Corner radius of interrior
 interrior_radius = 0; // [0:10]
+
+/* [Texts] */
+// Use text on top part
+useTextOnTop = false;
+// Text on top part
+textOnTop = "Some text";
+// Size of text on top part
+textOnTopSize = 3; // [1:1:15]
+// Depth of text on top part
+textOnTopDepth = 0.15; // [0.1:0.01:0.4]
 
 /* [Options] */
 // Wall thickness (2 lines for small boxes)
@@ -112,7 +124,14 @@ module part_top() {
       cube([_width, _height, _depth - 2 * wt]);
     }
     translate([wt, wt, 2 * wt]) 
-      cube([_width - 2 * wt, _height - 2 * wt, _depth]);    
+      cube([_width - 2 * wt, _height - 2 * wt, _depth]);
+    if (useTextOnTop) {
+      translate([wt + _width / 2, wt + _height / 2, 0])
+        linear_extrude(textOnTopDepth)
+          mirror([1, 0, 0])
+            text(textOnTop, size = textOnTopSize, 
+              halign = "center", valign = "center");
+    }
   }    
 }
 
