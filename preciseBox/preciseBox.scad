@@ -7,8 +7,10 @@
  * International (CC BY-NC-SA 4.0) license                    *
  * ---------------------------------------------------------- *
  * History:                                                   *
+ *  1.6 (2022-03-10):                                         *
+ *    * Add variable divider of box                           *
  *  1.5 (2022-02-24):                                         *
- *    * Add optional text on top part
+ *    * Add optional text on top part                         *
  *  1.4 (2021-08-31):                                         *
  *    * Fixed depth internal size calculation                 *
  *  1.3 (2021-08-26):                                         *
@@ -36,6 +38,8 @@ height = 30; // [10:1:200]
 depth = 10; // [5:1:200]
 // Dimensions is external (true) or internal (false)
 isExternal = true;
+// Divide bottom/top (height percent)
+divider_percent = 0; // [0:5:90]
 
 /* [Finger gap] */
 // Add finger gap
@@ -82,6 +86,9 @@ $fn = $preview ? $fn : 20;
 _width = isExternal ? width : width + 4 * wt + 2 * lt;
 _height = isExternal ? height : height + 4 * wt + 2 * lt;
 _depth = isExternal ? depth : depth + 4 * wt;
+// minimal divider is 2*wt (bottom wall thickness)
+// maximal divider is less than 2*wt bellow bottom part
+_divider = min(max(2 * wt, _depth * 0.01 * divider_percent), _depth - 4*wt);
 
 module main() {
   if (bottomPart) translate([0, 5, 0]) part_bottom();
@@ -92,10 +99,10 @@ module part_bottom() {
   difference(){
     union() {
       if (rounded) {
-        r_cube([_width, _height, 2 * wt], wt);
+        r_cube([_width, _height, _divider], wt);
       }
       else {
-        cube([_width, _height, 2 * wt]);
+        cube([_width, _height, _divider]);
       }
       translate([wt + lt, wt + lt, 0]) 
         r_cube([_width - 2 * wt - 2 * lt, _height - 2 * wt - 2 * lt, _depth - 2 * wt - tt], ir, false, false);
@@ -118,10 +125,10 @@ module part_bottom() {
 module part_top() {
   difference(){
     if (rounded) {
-      r_cube([_width, _height, _depth - 2 * wt], wt);
+      r_cube([_width, _height, _depth - _divider], wt);
     }
     else {
-      cube([_width, _height, _depth - 2 * wt]);
+      cube([_width, _height, _depth - _divider]);
     }
     translate([wt, wt, 2 * wt]) 
       cube([_width - 2 * wt, _height - 2 * wt, _depth]);
