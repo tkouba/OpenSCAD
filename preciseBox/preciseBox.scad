@@ -7,6 +7,9 @@
  * International (CC BY-NC-SA 4.0) license                    *
  * ---------------------------------------------------------- *
  * History:                                                   *
+ *  1.7 (2022-09-13):                                         *
+ *    * Fix finger gap with divider                           *
+ *    * Add finger gap adjustment                             *
  *  1.6 (2022-03-10):                                         *
  *    * Add variable divider of box                           *
  *  1.5 (2022-02-24):                                         *
@@ -78,6 +81,8 @@ bottomPart = true;
 /* [Hidden] */
 // Top tolerance (top space between botom walls and roof)
 tt = .4;
+// Finger gap adjustment
+fingerGapAdjustment = .15;
 // Inner round (manipulation enhancement)
 ir = max(.4, wt / 2);
 // Better rounds
@@ -112,10 +117,10 @@ module part_bottom() {
       r_cube([_width - 4 * wt - 2 * lt, _height - 4 * wt - 2 * lt, _depth - 4 * wt], interrior_radius, true, false);
     if (fingerGap) {
       union() {
-        translate([6 * wt + lt + fingerGapSize / 2, 0, 2 * wt + fingerGapSize / 2])
+        translate([6 * wt + lt + fingerGapSize / 2, 0, _divider + fingerGapSize / 2 + fingerGapAdjustment])
           rotate([-90, 0, 0])
             cylinder(d = fingerGapSize, h = _height); // Gap cylinder
-        translate([6 * wt + lt, 0, 2 * wt + fingerGapSize / 2])
+        translate([6 * wt + lt, 0, _divider + fingerGapSize / 2 + fingerGapAdjustment])
           cube([fingerGapSize, _height, _depth - (4 * wt + lt + fingerGapSize / 2)]);
       }
     }
