@@ -78,6 +78,27 @@
             "useTextOnTop": "true",
             "width": "155",
             "wt": "0.86"
+        },
+        "tamp box": {
+            "bottomPart": "true",
+            "depth": "18",
+            "divider_percent": "25",
+            "fingerGap": "true",
+            "fingerGapAdjustment": "0.15",
+            "fingerGapSize": "15",
+            "height": "55",
+            "interrior_radius": "1",
+            "isExternal": "false",
+            "lt": "0.15",
+            "rounded": "true",
+            "textOnTop": "Some text",
+            "textOnTopDepth": "0.15",
+            "textOnTopSize": "3",
+            "topPart": "true",
+            "tt": "0.4",
+            "useTextOnTop": "false",
+            "width": "55",
+            "wt": "0.86"
         }
     },
     "fileFormatVersion": "1",
