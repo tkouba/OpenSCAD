@@ -9,12 +9,14 @@
 
 // OpenSCAD model of DIN rail
 //DIN_Rail(x = 100, holes = true);
-module DIN_Rail(x = 10, holes = false) {
-  t = 1; /* DIN Rail thickness */
+module DIN_Rail(x = 10, /* DIN Rail length */
+  holes = false, /* generate holes */
+  t = 1 /* DIN Rail thickness */) {
   r = 0.8; /* DIN Rail inner round */
   a = 35;
   b = 25;
   c = 7.5;
+  translate([0,-a/2,0])
   difference() {
     rotate([90,0,90]) {
       linear_extrude(height=x) {
