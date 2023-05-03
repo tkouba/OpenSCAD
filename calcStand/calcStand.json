@@ -1,0 +1,42 @@
+{
+    "parameterSets": {
+        "Jana": {
+            "barrierBottom": "10",
+            "barrierLeft": "3",
+            "barrierRight": "3",
+            "barrierTop": "0",
+            "calcHeight": "150",
+            "calcWidth": "147",
+            "cornerRadius": "7",
+            "interriorHeight": "80",
+            "interriorWidth": "80",
+            "standHeight": "47",
+            "textBottom": "20",
+            "textContent": "Jája",
+            "textDepth": "0.6",
+            "textSize": "10",
+            "wt": "1"
+        },
+        "Jana 2": {
+            "barrierBottom": "10",
+            "barrierHeight": "3.6",
+            "barrierLeft": "2",
+            "barrierRight": "2",
+            "barrierTop": "0",
+            "barrierWidth": "1.6",
+            "calcHeight": "150",
+            "calcWidth": "145",
+            "cornerRadius": "7",
+            "interriorHeight": "90",
+            "interriorWidth": "110",
+            "standHeight": "47",
+            "textBottom": "20",
+            "textContent": "Jája",
+            "textDepth": "0.6",
+            "textSize": "10",
+            "wt": "0.3"
+        }
+    },
+    "parameterSets": "",
+    "fileFormatVersion": "1"
+}

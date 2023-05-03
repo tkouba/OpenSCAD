@@ -4,11 +4,17 @@ My public OpenSCAD models and libraries
 
 ## Models
 
-### [Precise box](preciseBox/README.md) 
+### [Precise box](preciseBox/README.md)
 
 Parametric full coverred box.
 
 ![Precise box](preciseBox/preciseBox.png "Precise box")
+
+### [Calculator stand](calcStand/README.md)
+
+Stand for desk calculator.
+
+![Calculator stand](calcStand/calcStand.jpg "Stand with calculator")
 
 ## License
 
