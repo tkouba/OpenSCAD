@@ -1,0 +1,24 @@
+{
+    "parameterSets": {
+        "Black+Decker": {
+            "$f": "0.01",
+            "$fudge": "0.01",
+            "baseHeight": "8",
+            "batteryWidth": "76",
+            "bevel": "1",
+            "holderHeight": "14",
+            "holderLength": "45",
+            "holderWidth": "49",
+            "holeSize": "3",
+            "holes": "2",
+            "noseHeight": "5",
+            "noseWidth": "4",
+            "screwHoleSizes": "[[3.2, 6.2, 1.7], [4.2, 8.2, 1.9], [5.2, 10.3, 2.4]]",
+            "type": "holder"
+        }
+    },
+    "parameterSets": "",
+    "fileFormatVersion": "1",
+    "parameterSets": "",
+    "parameterSets": ""
+}
